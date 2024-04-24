@@ -51,9 +51,7 @@ class StoryBrian {
     return _storyData[_storyNumber].choose2;
   }
 
-    void nextStory(int choiceNumber) {
-    //TODO: Step 21 - Using the story plan, update nextStory to change the storyNumber depending on the choice made by the user.
-    //When user is on story0 and they chose choice1, the story should progress to story2.
+  void nextStory(int choiceNumber) {
     if (choiceNumber == 1 && _storyNumber == 0) {
       _storyNumber = 2;
     } else if (choiceNumber == 2 && _storyNumber == 0) {
@@ -66,9 +64,7 @@ class StoryBrian {
       _storyNumber = 5;
     } else if (choiceNumber == 2 && _storyNumber == 2) {
       _storyNumber = 4;
-    }
-    //TODO: Step 22 - In nextStory() if the storyNumber is equal to 3 or 4 or 5, that means it's the end of the game and it should call a method called restart() that resets the storyNumber to 0.
-    else if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
+    } else if (_storyNumber == 3 || _storyNumber == 4 || _storyNumber == 5) {
       restart();
     }
   }
